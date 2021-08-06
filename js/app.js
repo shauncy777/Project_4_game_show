@@ -2,6 +2,16 @@
  * Project 4 - OOP Game App
  * app.js */
 
+
+
+/*
+Note for reviewer:
+I am hoping to receive an "Exceeds Expectations" grade, and will accept a "Meets" with notes on what components prevented
+the former to be met.
+Thanks so much for your time and consideration!
+*/
+
+
 'use strict';
 
 
