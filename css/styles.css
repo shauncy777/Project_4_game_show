@@ -77,10 +77,11 @@ button {
 .section {
   width: 100%;
   padding: 10px;
-}
+  }
 
 #phrase ul li{
   margin-top: 15px;
+
 }
 
 /* Title */
@@ -103,6 +104,8 @@ button {
   border-radius: 5px;
 }
 
+ 
+
 .space {
   width: 15px;
 }
@@ -118,8 +121,11 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   border-radius: 5px;
+  border-style: solid;
+  border-color: black;
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
+  transform: scale(1.1);
 }
 
 
