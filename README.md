@@ -23,8 +23,11 @@ How It Works:
 
 
 Extra features:
+
 Added code to ensure puzzle's words displayed with proper word wrapping to prevent one word being split on two lines (line 28 in Phrase.js).
-Revealed puzzle's phrase to losing player (line 70 in Game.js);
+
+Revealed puzzle's phrase to losing player (line 70 in Game.js).
+
 Updated styles.css for an outline and slight scaling transformation to make letters stand out more when guessed. 
 
 Thanks for stopping by and good luck!
