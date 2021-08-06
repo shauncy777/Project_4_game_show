@@ -5,7 +5,7 @@ OOP Game Show App:
   This program uses JavaScript and OOP (Object-Oriented Programming) to create the "Phrase Hunter" word guessing game by selecting a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.
 
 
-The Rules:
+How It Works:
 
 •  The goal is to guess all the letters in a hidden, random phrase in 5 guesses or less. At the beginning, only the number of letters and words in the phrase is shown, represented by blank boxes on the screen.
 
@@ -21,5 +21,10 @@ The Rules:
 
 • If the phrase is revealed before you run out of guesses, YOU WIN!!!
 
+
+Extra features:
+Added code to ensure puzzle's words displayed with proper word wrapping to prevent one word being split on two lines (line 28 in Phrase.js).
+Revealed puzzle's phrase to losing player (line 70 in Game.js);
+Updated styles.css for an outline and slight scaling transformation to make letters stand out more when guessed. 
 
 Thanks for stopping by and good luck!
