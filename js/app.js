@@ -3,28 +3,25 @@
  * app.js */
 
 
-
 /*
-Note for reviewer:
-I am hoping to receive an "Exceeds Expectations" grade, and will accept a "Meets" with notes on what components prevented
-the former to be met.
+Note for the reviewer:
+
+I am hoping to receive an "Exceeds Expectations" grade and would prefer that you fail the project with
+notes so that I can remedy those issues and resubmit should the project not pass initially.
 Thanks so much for your time and consideration!
 */
 
-
 'use strict';
 
-
-// Global var to create new instance of Game object
-let game = new Game();
-
+// Global var to reference for event listeners
+let game = '';
 
 // Selecting "Start Game" button
 const startButton = document.getElementById('btn__reset');
 
-
 // Event listener for "Start Game" button
 startButton.addEventListener('click', () => { 
+    let game = new Game;
     game.startGame();
 
 });

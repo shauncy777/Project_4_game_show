@@ -7,7 +7,6 @@
 // Variable storing the start screen
 const startScreenOverlay = document.getElementById('overlay');
 
-
 // Class that handles creation of Game objects
 class Game {
     constructor() {
@@ -66,11 +65,10 @@ class Game {
             } else {
                 const phraseUL = document.querySelector('#phrase ul');
 
-// ************ Displays losing message and reveals answer to player
+// Displays losing message and reveals answer to player
                 gameOverMessage.innerHTML = `Sorry, better luck next time! The answer was : <br><br> ${phraseUL.textContent}` ;
                 startScreenOverlay.className = 'lose';
             }
-        this.resetGame();
     }
 
 // Handles onscreen button clicks that trigger display to change accordingly
@@ -91,22 +89,6 @@ class Game {
                         }
                 }
             }
-    }
-
-// Resets the game with fresh lives and displays fresh phrase
-    resetGame(){
-        const phraseUL = document.querySelector('#phrase ul');
-        phraseUL.innerHTML = '';
-
-        const keys = document.querySelectorAll('.key');
-        keys.forEach(button => button.className = 'key');
-        keys.forEach(button => button.disabled = false);
-
-        let lives = document.querySelectorAll('img');
-        lives.forEach(life => life.src = 'images/liveHeart.png');
-
-        this.missed = 0;
-                   
     }
 
 }

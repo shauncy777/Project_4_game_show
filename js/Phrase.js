@@ -24,7 +24,7 @@ class Phrase {
                     listItem.className = 'space';
                 }            
         });
-        
+
 // Ensures phrase is displayed with proper word wrapping on page    
         phraseUL.innerHTML = `<span class="word" style="display:inline-block">` + phraseUL.innerHTML;
         phraseUL.innerHTML += `</span>`;
@@ -35,10 +35,7 @@ class Phrase {
 
 // Checks if chosen letter is in phrase
     checkLetter(letter) {
-        if ( this.phrase.includes(letter)) {
-            return true;
-        } else {
-            return false;
+            return this.phrase.includes(letter);
         }
     }
 
