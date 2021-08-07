@@ -21,6 +21,9 @@ How It Works:
 
 • If the phrase is revealed before you run out of guesses, YOU WIN!!!
 
+Play it here: https://shauncy777.github.io/Project_4_game_show/
+
+
 
 Extra features:
 
