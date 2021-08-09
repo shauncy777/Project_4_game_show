@@ -20,21 +20,6 @@
 
 // This would be called at gameOver
 
- //       this.resetGame();
+ 
 
 
-// Resets the game with fresh lives and displays fresh phrase
-    // resetGame(){
-    //     const phraseUL = document.querySelector('#phrase ul');
-    //     phraseUL.innerHTML = '';
-
-    //     const keys = document.querySelectorAll('.key');
-    //     keys.forEach(button => button.className = 'key');
-    //     keys.forEach(button => button.disabled = false);
-
-    //     let lives = document.querySelectorAll('img');
-    //     lives.forEach(life => life.src = 'images/liveHeart.png');
-
-    //     this.missed = 0;
-                   
-    // }

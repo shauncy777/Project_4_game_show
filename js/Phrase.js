@@ -37,7 +37,7 @@ class Phrase {
     checkLetter(letter) {
             return this.phrase.includes(letter);
         }
-    }
+    
 
 // Changes className to show correct guessed letters
     showMatchedLetter(letter) {

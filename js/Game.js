@@ -4,15 +4,13 @@
 
 'use strict';
 
-// Variable storing the start screen
-const startScreenOverlay = document.getElementById('overlay');
-
 // Class that handles creation of Game objects
 class Game {
     constructor() {
         this.missed = 0;
         this.phrases = this.createPhrases();
         this.activePhrase = null;
+        this.startScreenOverlay = document.getElementById('overlay');
     }
 
 // Stores and implements  the use of phrases in each game
@@ -24,7 +22,6 @@ class Game {
             new Phrase("Suspension of disbelief"),
             new Phrase("I can not believe it is not butter"),
         ]
-
         return phraseArray;
     }
 // Returns one of the phrases stored in the phraseArray var by selecting random array index
@@ -34,7 +31,7 @@ class Game {
 
 // Hides start screen and displays blank puzzle
     startGame() {
-        startScreenOverlay.style.display = 'none';
+        this.startScreenOverlay.style.display = 'none';
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
     }
@@ -58,17 +55,18 @@ class Game {
 // Browser displays message to let player know if they won or lost
     gameOver(gameWon){
         let gameOverMessage = document.querySelector('#game-over-message');
-        startScreenOverlay.style.display = 'inherit';
+        this.startScreenOverlay.style.display = 'inherit';
             if (gameWon) {
                 gameOverMessage.innerHTML = 'Great job!';
-                startScreenOverlay.className = 'win';
+                this.startScreenOverlay.className = 'win';
             } else {
                 const phraseUL = document.querySelector('#phrase ul');
 
 // Displays losing message and reveals answer to player
                 gameOverMessage.innerHTML = `Sorry, better luck next time! The answer was : <br><br> ${phraseUL.textContent}` ;
-                startScreenOverlay.className = 'lose';
+                this.startScreenOverlay.className = 'lose';
             }
+        this.resetGame();
     }
 
 // Handles onscreen button clicks that trigger display to change accordingly
@@ -89,6 +87,22 @@ class Game {
                         }
                 }
             }
+    }
+
+    // Resets the game with fresh lives and displays fresh phrase
+    resetGame(){
+        const phraseUL = document.querySelector('#phrase ul');
+        phraseUL.innerHTML = '';
+
+        const keys = document.querySelectorAll('.key');
+        keys.forEach(button => button.className = 'key');
+        keys.forEach(button => button.disabled = false);
+
+        let lives = document.querySelectorAll('img');
+        lives.forEach(life => life.src = 'images/liveHeart.png');
+
+        this.missed = 0;
+                   
     }
 
 }

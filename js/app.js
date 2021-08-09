@@ -21,7 +21,7 @@ const startButton = document.getElementById('btn__reset');
 
 // Event listener for "Start Game" button
 startButton.addEventListener('click', () => { 
-    let game = new Game;
+    game = new Game;
     game.startGame();
 
 });
